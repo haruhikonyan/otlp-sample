@@ -8,3 +8,11 @@ services:
       - /app/node_modules
     ports:
       - 8085:8080
+
+  # Jaeger
+  jaeger-all-in-one:
+    image: jaegertracing/all-in-one:1.48
+    ports:
+      - "16686:16686"
+      - "14268:14268"
+      - "14250"
