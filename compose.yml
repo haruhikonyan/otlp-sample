@@ -1,0 +1,10 @@
+services:
+  node:
+    image: node:alpine
+    working_dir: /app
+    command: /bin/sh -c "yarn && yarn start"
+    volumes:
+      - .:/app:delegated
+      - /app/node_modules
+    ports:
+      - 8085:8080
